@@ -18,8 +18,31 @@
                 </configuration>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>
+                    src/main/resources
+                </directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
     </build>
-
+<profiles>
+    <profile>
+        <id>rk</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <build>
+            <finalName>${project.artifactId}.rk</finalName>
+            <filters>
+                <filter>
+                    src/main/resources/rk.properties
+                </filter>
+            </filters>
+        </build>
+    </profile>
+</profiles>
     <dependencies>
 
         <dependency>

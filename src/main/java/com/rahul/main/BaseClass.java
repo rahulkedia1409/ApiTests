@@ -34,7 +34,9 @@ public class BaseClass {
             hosturl = prop.getProperty("baseUrl");
             userName = prop.getProperty("userName");
             password = prop.getProperty("password");
-
+           logger.log(Priority.INFO,"user name is::: "+userName);
+           logger.log(Priority.INFO,"password is :::"+password);
+           logger.log(Priority.INFO,"HOST is:::"+url);
 
         } catch (Exception e) {
             logger.log(Priority.INFO, e.getMessage());
